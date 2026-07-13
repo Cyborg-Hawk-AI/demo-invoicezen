@@ -1,0 +1,103 @@
+{
+  "idea": {
+    "name": "InvoiceZen",
+    "fingerprint": "minimal-invoicing-saas-quickbooks-alternative-no-bloat",
+    "pitch": "Dead-simple invoicing for freelancers fleeing QuickBooks bloat.",
+    "cluster": "QuickBooks bloat & invoicing frustration",
+    "target_customer": "Freelancers and micro-business owners (1-5 employees) currently paying for QuickBooks who only need invoicing, basic expense tracking, and payment collection",
+    "core_features": [
+      "One-screen invoice creation with instant send via email or link",
+      "Automated payment reminders on day 3, 7, and 14 past due",
+      "Stripe/PayPal payment collection embedded in invoice link",
+      "Simple dashboard: paid, unpaid, overdue \u2014 nothing else",
+      "CSV export for accountant handoff"
+    ],
+    "pricing_model": "Flat monthly subscription, no per-invoice fees",
+    "price_point": "$9/month or $79/year",
+    "gtm_channel": "Reddit communities r/QuickBooks, r/freelance, r/smallbusiness \u2014 post genuinely helpful migration guides; SEO targeting 'QuickBooks alternative simple invoicing'",
+    "competitive_landscape": "Wave (free but ad-supported, feature creep growing), Invoice Ninja (open source, complex self-host), FreshBooks (expensive, also bloating). No sub-$10 purely minimal invoicing SaaS with zero accounting overhead.",
+    "unfair_advantage": "Radical feature restraint as a feature \u2014 publicly commit to never adding payroll, inventory, or bank reconciliation. Positioning is the moat.",
+    "mvp_estimate": "Next.js + Supabase + Stripe; 3 weeks solo dev including payment link generation and automated reminder cron jobs",
+    "agentic_automation": "Stripe webhooks update invoice status automatically. Reminder emails sent by cron job (no human trigger). Support handled by an LLM-powered help widget trained on a 20-FAQ doc. New signups onboard via automated email sequence. Owner reviews a weekly Stripe revenue digest \u2014 zero manual ops.",
+    "origin_story": "In r/QuickBooks, users are posting threads titled 'Where are people moving to? QB is driving me crazy' with dozens of replies describing lag, forced feature bundles, and paying $30-60/month for payroll and inventory they never touch. One commenter wrote: 'I literally only need to send invoices and get paid. That's it.' Others confirmed they'd tried Wave but found it increasingly cluttered. The pattern is clear: a vocal, paying segment wants subtraction, not addition, and no current product is willing to stay small.",
+    "automation_playbook": "Invoice status updates via Stripe webhooks \u2014 zero manual checking. Overdue reminders fire via a nightly cron job with no human involvement. Customer support routed through an AI chat widget (OpenAI-backed) that resolves ~85% of questions from a static FAQ. Billing and subscription management handled entirely by Stripe Customer Portal. Owner's only recurring task: review a 5-minute weekly Stripe dashboard. Estimated owner time: under 1 hour/week.",
+    "maintenance_hours_per_week": 1,
+    "keywords": [
+      "quickbooks alternative small business",
+      "simple invoicing software",
+      "freelancer invoice app"
+    ],
+    "supporting_urls": [
+      "https://www.reddit.com/r/QuickBooks/comments/1upx7n5/where_are_people_moving_to_qb_is_driving_me/",
+      "https://www.reddit.com/r/SampleSize/comments/1uir9j4/casual_quick_question_for_us_business_ownerswhats/"
+    ],
+    "weighted_total": 116,
+    "checklist": {
+      "ten_plus_posts_same_pain": true,
+      "paying_for_inferior_solution": true,
+      "reachable_channel": true,
+      "mvp_under_4_weeks": true,
+      "price_point_high_enough": true,
+      "hair_on_fire": true,
+      "can_presell": true,
+      "fewer_than_3_competitors": true,
+      "low_maintenance_ops": true
+    },
+    "checklist_passed": 9,
+    "momentum": "unknown",
+    "rising_queries": [],
+    "gate_result": "passed"
+  },
+  "pain_points": [
+    {
+      "problem": "Small businesses spend countless daily hours manually transferring information from forms or emails into spreadsheets, sending repetitive WhatsApp messages, following up on invoices, compiling reports from multiple sources, and losing track of leads.",
+      "persona": "Small business owners in India",
+      "current_workaround": "Manual data entry, spreadsheets, repetitive messaging, disorganized lead management",
+      "frequency": "daily",
+      "wtp_signal": "Already paying \u20b95,000-\u20b930,000 one-time for automation solutions",
+      "url": "https://www.reddit.com/r/indianstartups/comments/1u775qs/i_save_small_businesses_20_hoursweek_with_simple/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "US business owners are overwhelmed with paperwork, tracking unpaid invoices, and spending countless hours on repetitive tasks that drain motivation.",
+      "persona": "US small business owners",
+      "current_workaround": "Manual paperwork handling, manual invoice tracking, repetitive task execution",
+      "frequency": "daily",
+      "wtp_signal": "Implied willingness to adopt tools that solve genuine challenges",
+      "url": "https://www.reddit.com/r/SampleSize/comments/1uir9j4/casual_quick_question_for_us_business_ownerswhats/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Content creators and AI workflow users waste time manually copying AI responses, pasting them into the next prompt, and repeating this process across multiple steps instead of having responses automatically transfer between sequential prompts.",
+      "persona": "Content creators, prompt engineers, knowledge workers using AI tools",
+      "current_workaround": "Manual copy-paste between prompts, reviewing and modifying outputs manually between steps",
+      "frequency": "daily",
+      "wtp_signal": "Built a Chrome extension (Workflowly) to solve this, indicating significant time investment",
+      "url": "https://www.reddit.com/r/PromptEngineering/comments/1ukffkj/a_simple_ai_workflow_thats_saving_me_a_lot_of/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "QuickBooks users are frustrated by constant feature bloat, software lag, persistent bugs, and forced payment for features they don't use when they only need basic invoicing functionality.",
+      "persona": "Small business owners, freelancers using QuickBooks for invoicing",
+      "current_workaround": "Continue using QuickBooks despite frustration, or search for alternative accounting software",
+      "frequency": "daily",
+      "wtp_signal": "Currently paying for QuickBooks subscription",
+      "url": "https://www.reddit.com/r/QuickBooks/comments/1upx7n5/where_are_people_moving_to_qb_is_driving_me/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Knowledge workers struggle with context switching and mental overhead from managing multiple tasks like coding, emails, and administrative appointments, losing focus on primary work.",
+      "persona": "Software developers, knowledge workers",
+      "current_workaround": "Manual task management, context switching between work and personal tasks",
+      "frequency": "daily",
+      "wtp_signal": "Explicit statement 'I'd pay for something to deal with that'",
+      "url": "https://news.ycombinator.com/item?id=48885443",
+      "engagement": 0,
+      "source": "hackernews"
+    }
+  ]
+}
